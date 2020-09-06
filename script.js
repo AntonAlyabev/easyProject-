@@ -1,14 +1,21 @@
-function validForm() {
-  var  charMatch = new RegExp('^[a-zA-Z_0-9]*$');
-  var validName = name => {
-      if (login.length < 6) return false;
-      if (login.length > 12) return false;
-      if (!charMatch.test(login)) return false;
-      return true;
-      alert("четко");
-  };
+//function validForm() {
+  //var  charMatch = new RegExp('^[a-zA-Z_0-9]*$');
+  let validName = document.getElementById ('inp_1').value {
+      if (validName.length <= 16) {return false};
+        else {
+          (alert("больше 16"))};
+      if (validName.length >= 1) {return false};
+        else {
+          (alert("пустая строка"))};
+
+      /* if (!charMatch.test(name)) return false;
+        else (alert("больше 16")); */
+      //return true;
+  //};
+
 }
-ß
+
+
   /*     function validForm() {
     var name_length = ("inp_1").val().length;
       var name_input = document.querySelector("inp_1");
@@ -27,7 +34,7 @@ function validForm() {
         name_input.setCustomValidity("");
        return true;
   }
- */}
+ }
 
 /* var	elements	= form.querySelectorAll('.form-control'),
   btn= document.getElementById('send_mess'),
