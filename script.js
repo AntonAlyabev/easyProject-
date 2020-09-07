@@ -1,10 +1,12 @@
 //function validForm() {
   //var  charMatch = new RegExp('^[a-zA-Z_0-9]*$');
   let validName = document.getElementById ('inp_1').value 
-      if (validName.length <= 16) {}
-        else {alert("больше 16")}
-      if (validName.length <= 1) {}
-        else {alert("пустая строка")};
+      if (validName.length >= 16) {alert('Больше 16')}
+      else if (validName.length <= 1) {alert('Короткое имя')}
+      else {alert('ок')}
+
+      //if (validName.length <= 1) {}
+        //else {alert("пустая строка")};
   
   
 
