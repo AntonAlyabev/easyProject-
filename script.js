@@ -1,19 +1,18 @@
 //function validForm() {
   //var  charMatch = new RegExp('^[a-zA-Z_0-9]*$');
-  let validName = document.getElementById ('inp_1').value {
-      if (validName.length <= 16) {return false};
-        else {
-          (alert("больше 16"))};
-      if (validName.length >= 1) {return false};
-        else {
-          (alert("пустая строка"))};
+  let validName = document.getElementById ('inp_1').value 
+      if (validName.length <= 16) {}
+        else {alert("больше 16")}
+      if (validName.length <= 1) {}
+        else {alert("пустая строка")};
+  
+  
 
       /* if (!charMatch.test(name)) return false;
         else (alert("больше 16")); */
       //return true;
   //};
 
-}
 
 
   /*     function validForm() {
