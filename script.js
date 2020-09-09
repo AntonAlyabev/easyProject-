@@ -1,68 +1,26 @@
-//function validForm() {
-  //var  charMatch = new RegExp('^[a-zA-Z_0-9]*$');
-  let validName = document.getElementById ('inp_1').value 
-      if (validName.length >= 16) {alert('Больше 16')}
-      else if (validName.length <= 1) {alert('Короткое имя')}
-      else {alert('ок')}
-
-      //if (validName.length <= 1) {}
-        //else {alert("пустая строка")};
-  
-  
-
-      /* if (!charMatch.test(name)) return false;
-        else (alert("больше 16")); */
-      //return true;
-  //};
-
-
-
-  /*     function validForm() {
-    var name_length = ("inp_1").val().length;
-      var name_input = document.querySelector("inp_1");
-      if (name_length != 0) {
-          if ((name_length <= 16) {
-              name_input.setCustomValidity("");
-              var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-              return true;
-          }
-          else {
-              name_input.setCustomValidity("Поле должно быть заполнено, длина не более 16 символов");
-              return false;
-         }
-      }
-     else {
-        name_input.setCustomValidity("");
-       return true;
-  }
+function check() {
+  validateName();
+  validatePassEquality();
  }
 
-/* var	elements	= form.querySelectorAll('.form-control'),
-  btn= document.getElementById('send_mess'),
-  patternName	= /^[a-zA-Z0-9][а-яёА-ЯЁ\s]+$/,
-	patternMail	= /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z])+$/,
-  errorMess	= [
-		'Незаполненное поле ввода', // [0]
-		'Введите Ваше реальное имя', // [1]
-		'Укажите Ваш электронную почту', // [2]
-		'Неверный формат электронной почты', // [3]
-		'Укажите тему сообщения', // [4]
-		'Напишите текст сообщения', // [5]
-		'Ваше сообщение похоже на спам, уберите специальные символы.' // [6]
-	],
-	iserror		= false;
-  function validForm(e) {
-    var formVal = getFormData(form),error;
-  }
+ function getValue(chkElementId) {
+  return document.getElementById (chkElementId).value;
+}
 
-  function getFormData(form) {
-    var controls = {};
-    if (!form.elements) return '';
-    for (var i = 0, ln = form.elements.length; i < ln; i++) {
-      var element = form.elements[i];
-      if (element.tagName.toLowerCase() != 'button') {
-        controls[element.name]= element.value;
+function validateName() {
+  let name = getValue('inp_1');
+  if ((name.length >= 16) || (name.length <= 1)) {
+    alert ('Ошибка в длине имени')
+  }
+}
+
+function validatePassEquality() {
+  let pass = getValue('inp_4'),
+      pass2 = getValue('inp_5')
+      if ((pass.length >= 16) || (pass.length <= 1)) {
+        alert ('Ошибка в длине пароля')
       }
-    } 
-    return controls;
-  } */
+      if (pass != pass2) {
+        alert('Пароли не совпадают');
+  }
+}
