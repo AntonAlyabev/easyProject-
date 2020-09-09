@@ -1,6 +1,7 @@
 function check() {
   validateName();
   validatePassEquality();
+  validatePass();
  }
 
  function getValue(chkElementId) {
@@ -25,7 +26,7 @@ function validatePassEquality() {
   }
 }
 
-function validateName() {
+function validatePass() {
   let pass3 = getValue('inp_4');
   if ((pass3.length >= 16) || (pass3.length <= 1)) {
     alert ('Ошибка в длине пароля')
